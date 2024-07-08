@@ -1,4 +1,4 @@
-export default function ArrowDownIcon({ className }) {
+export default function ArrowDownIcon() {
   return (
     <svg
       width="15"

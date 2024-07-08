@@ -37,9 +37,9 @@ const menuItems = [
 ];
 
 export default function Footer() {
-  const { pathname } = usePathname();
+  const pathname = usePathname();
 
-  const isActive = (route) => {
+  const isActive = (route: string) => {
     return pathname === route;
   };
 

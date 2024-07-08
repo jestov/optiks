@@ -1,10 +1,10 @@
+import { FC } from "react";
 import Image from "next/image";
 import TargetIcon from "@/components/icons/TargetIcon";
 import FractionalIcon from "@/components/icons/FractionalIcon";
 import MoneyIcon from "@/components/icons/MoneyIcon";
 import SettingsIcon from "@/components/icons/SettingsIcon";
 import StatsIcon from "@/components/icons/StatsIcon";
-import RawIcon from "@/components/icons/RawIcon";
 import BrandStrip from "@/components/BrandStrip";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -12,7 +12,29 @@ import ContactSmall from "@/components/ContactSmall";
 import ArrowSmallIcon from "@/components/icons/ArrowSmallIcon";
 import Testimonials from "@/components/Testimonials";
 
-const Services = () => (
+type IconProps = {
+  className: string;
+};
+
+type ServiceCardProps = {
+  Icon: FC<IconProps>;
+  title: string;
+  description: string;
+};
+
+const ServiceCard: FC<ServiceCardProps> = ({ Icon, title, description }) => (
+  <div className="flex flex-col gap-6 my-8 items-start border border-white border-opacity-10 p-8 md:p-16 rounded-[32px]">
+    <div className="flex gap-6 items-center">
+      <Icon className="min-w-[60px] max-w-[60px] md:min-w-[80px] md:max-w-[80px]" />
+      <h3 className="text-xl md:text-3xl text-greenLighter">{title}</h3>
+    </div>
+    <p className="!leading-snug text-base md:text-xl text-white">
+      {description}
+    </p>
+  </div>
+);
+
+const Services: FC = () => (
   <div>
     <ServiceCard
       Icon={FractionalIcon}
@@ -34,18 +56,6 @@ const Services = () => (
       title="The CFO Methodology"
       description="Through this program we share the best practices we have learned for you to achieve the best in class tools and strategies for managing your financial department whether you are a CEO or CFO."
     />
-  </div>
-);
-
-const ServiceCard = ({ Icon, title, description }) => (
-  <div className="flex flex-col gap-6 my-8 items-start border border-white border-opacity-10 p-8 md:p-16 rounded-[32px]">
-    <div className="flex gap-6 items-center">
-      <Icon className="min-w-[60px] max-w-[60px] md:min-w-[80px] md:max-w-[80px]" />
-      <h3 className="text-xl md:text-3xl text-greenLighter">{title}</h3>
-    </div>
-    <p className="!leading-snug text-base md:text-xl text-white">
-      {description}
-    </p>
   </div>
 );
 

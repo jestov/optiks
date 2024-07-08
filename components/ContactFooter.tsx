@@ -14,8 +14,9 @@ function ContactFooter() {
     },
   ];
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -24,10 +25,7 @@ function ContactFooter() {
       },
       body: JSON.stringify({
         access_key: "a40fbdea-5dff-4265-b353-66e062bbdc86",
-        name: e.target.name.value,
-        email: e.target.email.value,
-        company: e.target.company.value,
-        message: e.target.message.value,
+        email: form.email.valueOf,
       }),
     });
     const result = await response.json();
@@ -44,7 +42,7 @@ function ContactFooter() {
   if (formSubmitted) {
     return (
       <div className="py-5 text-2xl text-white" role="alert">
-        Thanks for your message! We'll reply you soon!
+        Thanks for your message! We`&apos;`ll reply to you soon!
       </div>
     );
   }
@@ -59,7 +57,7 @@ function ContactFooter() {
       }
     >
       <div className="w-full flex flex-col gap-2 md:mr-8">
-        <h4 className="text-2xl md:text-3x ">
+        <h4 className="text-2xl md:text-3xl">
           Ready to grow the value of your company?
         </h4>
         <p className="text-base !leading-snug">

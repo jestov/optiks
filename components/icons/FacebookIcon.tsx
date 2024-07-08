@@ -1,4 +1,11 @@
-export default function FacebookIcon({ className, color }) {
+import React from "react";
+
+interface FacebookIconProps {
+  className: string;
+  color: string;
+}
+
+const FacebookIcon: React.FC<FacebookIconProps> = ({ className, color }) => {
   return (
     <svg
       width="auto"
@@ -14,4 +21,6 @@ export default function FacebookIcon({ className, color }) {
       />
     </svg>
   );
-}
+};
+
+export default FacebookIcon;

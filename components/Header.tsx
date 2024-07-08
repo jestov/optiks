@@ -1,11 +1,11 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Logo from "../components/Logo";
 import LinkedinIcon from "../components/icons/LinkedinIcon";
 import FacebookIcon from "../components/icons/FacebookIcon";
 import InstagramIcon from "../components/icons/InstagramIcon";
-import CloseIcon from "../components/icons/CloseIcon";
 
 export default function Menu() {
   const [isScrolledPastMain, setIsScrolledPastMain] = useState(false);
@@ -121,7 +121,7 @@ export default function Menu() {
     setIsMobileMenuOpen(false);
   };
 
-  const handleMenuClick = (path) => {
+  const handleMenuClick = (path: string) => {
     const element = document.getElementById(path.replace("#", ""));
     if (element) {
       window.scrollTo({

@@ -19,7 +19,6 @@ function Contact() {
       required: true,
       placeholder: "E-mail*",
     },
-
     {
       id: "message",
       type: "textarea",
@@ -28,8 +27,9 @@ function Contact() {
     },
   ];
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -38,10 +38,10 @@ function Contact() {
       },
       body: JSON.stringify({
         access_key: "a40fbdea-5dff-4265-b353-66e062bbdc86",
-        name: e.target.name.value,
-        email: e.target.email.value,
-        company: e.target.company.value,
-        message: e.target.message.value,
+        name: form.name.valueOf,
+        email: form.email.valueOf,
+        company: form.company.valueOf,
+        message: form.message.valueOf,
       }),
     });
     const result = await response.json();
@@ -58,7 +58,7 @@ function Contact() {
   if (formSubmitted) {
     return (
       <div className="py-5 text-2xl text-white" role="alert">
-        Thanks for your message! We'll reply you soon!
+        Thanks for your message! We`&apos;`ll reply to you soon!
       </div>
     );
   }
@@ -78,27 +78,10 @@ function Contact() {
             <textarea
               name={field.id}
               required={field.required}
-              rows="4"
+              rows={4}
               placeholder={field.placeholder}
               className="font-belgro px-5 md:px-6 py-4 md:py-5 w-full rounded-[18px] bg-white bg-opacity-0 focus:bg-opacity-10 border border-white border-opacity-15 resize-none focus:border-opacity-20 tracking-wide text-white placeholder-white !outline-none hover:bg-opacity-5"
             ></textarea>
-          ) : field.type === "select" ? (
-            <div className="relative">
-              <select
-                name={field.id}
-                required={field.required}
-                className="font-belgro px-5 md:px-6 py-4 md:py-5 w-full rounded-[18px] bg-white bg-opacity-0 focus:bg-opacity-10 border border-white border-opacity-15 focus:border-opacity-20 tracking-wide !outline-none text-white appearance-none hover:bg-opacity-5"
-              >
-                <option value="" disabled selected>
-                  {field.placeholder}
-                </option>
-                {field.options.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </div>
           ) : (
             <input
               type={field.type}

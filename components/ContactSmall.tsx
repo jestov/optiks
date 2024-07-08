@@ -14,8 +14,9 @@ function ContactSmall() {
     },
   ];
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -24,10 +25,7 @@ function ContactSmall() {
       },
       body: JSON.stringify({
         access_key: "a40fbdea-5dff-4265-b353-66e062bbdc86",
-        name: e.target.name.value,
-        email: e.target.email.value,
-        company: e.target.company.value,
-        message: e.target.message.value,
+        email: form.email.valueOf,
       }),
     });
     const result = await response.json();
@@ -44,7 +42,7 @@ function ContactSmall() {
   if (formSubmitted) {
     return (
       <div className="py-5 text-2xl text-white" role="alert">
-        Thanks for your message! We'll reply you soon!
+        Thanks for your message! We`&apos;`ll reply to you soon!
       </div>
     );
   }
@@ -55,11 +53,11 @@ function ContactSmall() {
       className={
         formSubmitted
           ? "hidden"
-          : "flex flex-col md:flex-row w-full relative z-30 max-w-5xl items-center gap-4 md:gap-0 bg-secondary p-10 md:p-12 rounded-[32px] "
+          : "flex flex-col md:flex-row w-full relative z-30 max-w-5xl items-center gap-4 md:gap-0 bg-secondary p-10 md:p-12 rounded-[32px]"
       }
     >
       <div className="w-full flex flex-col gap-2 md:mr-8">
-        <h4 className="text-3xl">Let's make it possible!</h4>
+        <h4 className="text-3xl">Let`&apos;`s make it possible!</h4>
         <p className="text-base !leading-">
           <span className="text-greenLighter">Unlock exclusive insights</span>{" "}
           by contacting our sales team.
