@@ -1,4 +1,10 @@
-export default function StatsIcon({ className }) {
+import React from "react";
+
+interface StatsIconProps {
+  className: string;
+}
+
+const StatsIcon: React.FC<StatsIconProps> = ({ className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,4 +23,6 @@ export default function StatsIcon({ className }) {
       <path d="M80 77.4043H69.0567V42.4043H80V77.4043Z" fill="#1B294F" />
     </svg>
   );
-}
+};
+
+export default StatsIcon;

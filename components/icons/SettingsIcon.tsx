@@ -1,4 +1,10 @@
-export default function SettingsIcon({ className }) {
+import React from "react";
+
+interface SettingsIconProps {
+  className: string;
+}
+
+const SettingsIcon: React.FC<SettingsIconProps> = ({ className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,4 +21,6 @@ export default function SettingsIcon({ className }) {
       />
     </svg>
   );
-}
+};
+
+export default SettingsIcon;

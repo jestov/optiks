@@ -1,4 +1,11 @@
-export default function InstagramIcon({ className, color }) {
+import React from "react";
+
+interface InstagramIconProps {
+  className: string;
+  color: string;
+}
+
+const InstagramIcon: React.FC<InstagramIconProps> = ({ className, color }) => {
   return (
     <svg
       width="auto"
@@ -14,4 +21,6 @@ export default function InstagramIcon({ className, color }) {
       />
     </svg>
   );
-}
+};
+
+export default InstagramIcon;

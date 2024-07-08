@@ -1,4 +1,11 @@
-export default function LinkedinIcon({ className, color }) {
+import React from "react";
+
+interface LinkedinIconProps {
+  className: string;
+  color: string;
+}
+
+const LinkedinIcon: React.FC<LinkedinIconProps> = ({ className, color }) => {
   return (
     <svg
       width="38"
@@ -14,4 +21,6 @@ export default function LinkedinIcon({ className, color }) {
       />
     </svg>
   );
-}
+};
+
+export default LinkedinIcon;

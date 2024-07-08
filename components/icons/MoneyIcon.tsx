@@ -1,4 +1,10 @@
-export default function MoneyIcon({ className }) {
+import React from "react";
+
+interface MoneyIconProps {
+  className: string;
+}
+
+const MoneyIcon: React.FC<MoneyIconProps> = ({ className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,4 +23,6 @@ export default function MoneyIcon({ className }) {
       />
     </svg>
   );
-}
+};
+
+export default MoneyIcon;
