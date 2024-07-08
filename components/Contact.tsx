@@ -58,7 +58,7 @@ function Contact() {
   if (formSubmitted) {
     return (
       <div className="py-5 text-2xl text-white" role="alert">
-        Thanks for your message! We`&apos;`ll reply to you soon!
+        Thanks for your message! We&apos;ll reply to you soon!
       </div>
     );
   }
@@ -95,7 +95,7 @@ function Contact() {
       ))}
       <button
         type="submit"
-        className="flex justify-between items-center gap-12 px-5 md:px-6 py-4 md:py-5 min-w-1/3 rounded-full cursor-pointer bg-greenLighter text-secondary transition duration-500"
+        className="flex justify-between items-center gap-12 px-5 md:px-6 py-4 md:py-5 min-w-1/3 rounded-full cursor-pointer bg-greenLighter hover:bg-greenLight text-secondary transition duration-500"
       >
         <div>Send Message</div>
         <span className="inline-block ml-2">

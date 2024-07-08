@@ -68,7 +68,7 @@ const Testimonials: React.FC = () => {
           <h3 className="text-3xl md:text-5xl font-monument uppercase text-center relative before:absolute after:absolute before:bg-[url('/img/title_left.svg')] after:bg-[url('/img/title_right.svg')] before:bg-contain after:bg-contain before:bg-no-repeat after:bg-no-repeat before:w-[120%] before:h-[120%] before:left-[-5%] before:top-[-12.5%] after:w-[120%] after:h-[120%] after:left-[102.75%] after:top-[-12.5%]">
             Our <span className="text-greenLighter">Clients</span>
           </h3>
-          <h4 className="text-white text-2xl md:text-4xl w-full text-center">
+          <h4 className="text-white text-xl md:text-4xl w-full text-center">
             Our clients have a combined funding of
             <span className="text-greenLighter"> ~US400 MM</span>
           </h4>

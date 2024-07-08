@@ -12,7 +12,7 @@ export default function Menu() {
   const [isMobileView, setIsMobileView] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState<string>("");
 
   // Verifica si la vista es móvil
   useEffect(() => {
@@ -24,6 +24,22 @@ export default function Menu() {
     checkIfMobileView();
 
     const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (
+          window.scrollY >= sectionTop - sectionHeight / 3 &&
+          window.scrollY < sectionTop + sectionHeight - sectionHeight / 3
+        ) {
+          currentSection = section.getAttribute("id") || "";
+        }
+      });
+
+      setActiveSection(`#${currentSection}`);
+
       const main = document.querySelector("main");
       if (main) {
         const mainOffset =
@@ -93,23 +109,23 @@ export default function Menu() {
     { name: "Contact", path: "#contact" },
   ];
 
-  const iconColor = "#ffffff";
+  const iconColor = "#3b46ba";
 
   const socialOptions = [
     {
       name: "Instagram",
       icon: <InstagramIcon color={iconColor} className="h-8" />,
-      link: "https://www.instagram.com/lade.rh/",
+      link: "#",
     },
     {
       name: "Facebook",
       icon: <FacebookIcon color={iconColor} className="h-8" />,
-      link: "https://www.facebook.com/LadeRH1/",
+      link: "#",
     },
     {
       name: "LinkedIn",
       icon: <LinkedinIcon color={iconColor} className="h-8" />,
-      link: "https://www.linkedin.com/in/doravaldez/",
+      link: "https://www.linkedin.com/company/optiks-strategies/",
     },
   ];
 
@@ -134,15 +150,15 @@ export default function Menu() {
     closeMobileMenu();
   };
 
-  const headerClasses = `flex gap-12 my-5 md:gap-6 items-center justify-center w-full mx-auto inline-block transition-all duration-300 z-40 fixed max-w-[100vw] ${isScrolledPastMain ? "" : ""} ${isMobileMenuOpen ? "" : ""}`;
+  const headerClasses = `flex gap-12 my-5 md:gap-6 items-center justify-center w-full mx-auto inline-block transition-all duration-300 z-50 fixed max-w-[100vw] ${isScrolledPastMain ? "" : ""} ${isMobileMenuOpen ? "" : ""}`;
 
   return (
     <>
       <nav className={headerClasses}>
-        <div className="desktop-menu flex gap-5 w-full max-w-[900px] xl:max-w-[1000px] justify-start mx-auto bg-white backdrop-blur-3xl bg-opacity-90 rounded-full px-2 py-1.5 border border-primary border-opacity-10 items-center">
+        <div className="desktop-menu flex gap-5 w-full max-w-[900px] xl:max-w-[1000px] justify-start mx-auto bg-white rounded-full px-2 py-1.5 border border-primary border-opacity-10 items-center">
           <div className="flex justify-between w-full items-center gap-8 lg:gap-12 2xl:gap-20 pl-5">
             <Logo />
-            <ul className="flex gap-6 lg:gap-10 2xl:gap-2 items-center">
+            <ul className="flex gap-4 lg:gap-4 2xl:gap-2 items-center">
               {menuOptions.map((option, index) => (
                 <li key={index}>
                   <button
@@ -162,7 +178,7 @@ export default function Menu() {
         </div>
 
         {isMobileView && (
-          <div className="flex justify-between w-full bg-white px-4 py-3 items-center rounded-full fixed z-50 top-[20px] mx-[10px] max-w-[95vw]">
+          <div className="flex justify-between w-full bg-white p-3 items-center rounded-full fixed z-50 top-[20px] mx-[10px] max-w-[95vw]">
             <div className="pl-2">
               <Logo />
             </div>
@@ -173,7 +189,7 @@ export default function Menu() {
             </button>
             {isMobileMenuOpen && (
               <div className="mobile-menu bg-primary text-white transition duration-300">
-                <ul className="flex flex-col gap-6 p-4 items-start">
+                <ul className="flex flex-col gap-10 py-5 px-2.5 items-start">
                   {menuOptions.map((option, index) => (
                     <li key={index}>
                       <button
@@ -181,7 +197,7 @@ export default function Menu() {
                         className="cursor-pointer"
                       >
                         <span
-                          className={`text-secondaryBlue cursor-pointer text-base uppercase font-monument tracking-wider  ${activeSection === option.path ? "bg-greenLighter hover:bg-greenLighter" : ""}`}
+                          className={`text-secondaryBlue cursor-pointer font-monument uppercase tracking-wider text-[12px] px-5 py-3.5 rounded-full hover:bg-gray-100 transition duration-500  ${activeSection === option.path ? "bg-greenLighter hover:bg-greenLighter" : ""}`}
                         >
                           {option.name}
                         </span>
@@ -195,7 +211,7 @@ export default function Menu() {
                       <a
                         href={social.link}
                         target="_blank"
-                        className="text-inherit"
+                        className="text-inherit hover:opacity-85 transition duration-500"
                         rel="noopener noreferrer"
                       >
                         {social.icon}
@@ -225,20 +241,20 @@ export default function Menu() {
             cursor: pointer;
           }
           .line {
-            width: 30px;
-            height: 2px;
+            width: 25px;
+            height: 1.5px;
             background-color: #3b46ba;
-            margin: 6px;
+            margin: 5px;
             transition: transform 0.4s;
           }
           .open:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
+            transform: translateY(6.5px) rotate(45deg);
           }
           .open:nth-child(2) {
             opacity: 0;
           }
           .open:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-6.5px) rotate(-45deg);
           }
           .desktop-menu {
             display: none;
@@ -247,12 +263,10 @@ export default function Menu() {
             display: flex;
             flex-direction: column;
             position: fixed;
-            top: ${isScrolledPastMain ? "80px" : "112px"};
+            top: 85px;
             left: 10px;
             width: calc(100vw - 20px);
-            height: ${isScrolledPastMain
-              ? "calc(100vh - 80px)"
-              : "calc(100vh - 112px)"};
+            height: auto;
             background-color: #fff;
             border-radius: 32px;
             padding: 20px;

@@ -42,7 +42,7 @@ function ContactSmall() {
   if (formSubmitted) {
     return (
       <div className="py-5 text-2xl text-white" role="alert">
-        Thanks for your message! We`&apos;`ll reply to you soon!
+        Thanks for your message! We&apos;ll reply to you soon!
       </div>
     );
   }
@@ -57,7 +57,7 @@ function ContactSmall() {
       }
     >
       <div className="w-full flex flex-col gap-2 md:mr-8">
-        <h4 className="text-3xl">Let`&apos;`s make it possible!</h4>
+        <h4 className="text-3xl">Let&apos;s make it possible!</h4>
         <p className="text-base !leading-">
           <span className="text-greenLighter">Unlock exclusive insights</span>{" "}
           by contacting our sales team.
@@ -76,7 +76,7 @@ function ContactSmall() {
       ))}
       <button
         type="submit"
-        className="min-w-[200px] flex justify-between items-center gap-4 px-5 md:px-5.5 py-4 md:py-5 rounded-full md:rounded-l-none cursor-pointer bg-greenLighter text-secondary transition duration-500"
+        className="min-w-[200px] flex justify-between items-center gap-4 px-5 md:px-5.5 py-4 md:py-5 rounded-full md:rounded-l-none cursor-pointer bg-greenLighter hover:bg-greenLight text-secondary transition duration-500"
       >
         <div>Contact Sales</div>
         <span className="inline-block ml-2">

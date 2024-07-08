@@ -42,7 +42,7 @@ function ContactFooter() {
   if (formSubmitted) {
     return (
       <div className="py-5 text-2xl text-white" role="alert">
-        Thanks for your message! We`&apos;`ll reply to you soon!
+        Thanks for your message! We&apos;ll reply to you soon!
       </div>
     );
   }
@@ -78,7 +78,7 @@ function ContactFooter() {
       ))}
       <button
         type="submit"
-        className="min-w-[180px] -mt-2 flex justify-between items-center gap-1.5 px-5 md:px-5.5 py-4 md:py-5 rounded-full md:rounded-l-none cursor-pointer bg-greenLighter text-secondary transition duration-500"
+        className="min-w-[180px] -mt-2 md:-mt-0 flex justify-between items-center gap-1.5 px-5 md:px-5.5 py-4 md:py-5 rounded-full md:rounded-l-none cursor-pointer bg-greenLighter hover:bg-greenLight text-secondary transition duration-500"
       >
         <div>Contact Sales</div>
         <span className="inline-block">

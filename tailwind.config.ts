@@ -21,6 +21,7 @@ const config: Config = {
         fourth: "#9AD1D4",
         fifth: "#008BCC",
         secondaryBlue: "#3b46ba",
+        greenLight: "#AEFFB2",
         greenLighter: "#befac1",
       },
     },
