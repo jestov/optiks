@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import ArrowSmallIcon from "./icons/ArrowSmallIcon";
+import BrandStrip from "./BrandStrip";
 
 type Testimonial = {
   name: string;
@@ -62,9 +63,9 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <section className="text-white md:py-12 py-10 w-full px-[30px]">
-      <div className="container mx-auto px-2 lg:px-12 flex flex-col gap-12 md:gap-20 items-center">
-        <div className="flex flex-col gap-6 md:gap-10 items-center">
+    <section className="text-white md:py-12 py-10 w-full">
+      <div className="flex flex-col gap-12 md:gap-20 items-center justify-center w-full">
+        <div className="flex flex-col gap-6 md:gap-10 items-center  px-2 lg:px-12">
           <h3 className="text-3xl md:text-5xl font-monument uppercase text-center relative before:absolute after:absolute before:bg-[url('/img/title_left.svg')] after:bg-[url('/img/title_right.svg')] before:bg-contain after:bg-contain before:bg-no-repeat after:bg-no-repeat before:w-[120%] before:h-[120%] before:left-[-5%] before:top-[-12.5%] after:w-[120%] after:h-[120%] after:left-[102.75%] after:top-[-12.5%]">
             Our <span className="text-greenLighter">Clients</span>
           </h3>
@@ -73,7 +74,8 @@ const Testimonials: React.FC = () => {
             <span className="text-greenLighter"> ~US400 MM</span>
           </h4>
         </div>
-        <div className="relative flex flex-col gap-12 md:gap-20 justify-center items-center overflow-hidden max-w-6xl w-full px-[15px]">
+        <BrandStrip />
+        <div className="relative flex flex-col gap-10 md:gap-14 justify-center items-center overflow-hidden max-w-6xl w-full px-[15px]">
           <button
             className={`absolute left-0 z-10 transform md:-translate-y-[60px] text-2xl text-white p-4 md:p-6 transition duration-300 rounded-full focus:outline-none ${
               current === 0
@@ -140,6 +142,15 @@ const Testimonials: React.FC = () => {
               ></div>
             ))}
           </div>
+        </div>
+        <div className="w-full md:px-14 lg:px-48 xl:px-32">
+          <Image
+            className="w-full max-w-[1400px] mx-auto"
+            width={1000}
+            height={1000}
+            src="/img/map.svg"
+            alt=""
+          />
         </div>
       </div>
     </section>

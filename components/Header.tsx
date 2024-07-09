@@ -166,7 +166,7 @@ export default function Menu() {
                     className="cursor-pointer"
                   >
                     <span
-                      className={`inline-flex text-secondaryBlue !leading-loose font-monument uppercase tracking-wider text-[11px] px-5 py-3.5 rounded-full hover:bg-gray-100 transition duration-500 ${activeSection === option.path ? "bg-greenLighter hover:bg-greenLighter" : ""}`}
+                      className={`inline-flex text-secondaryBlue !leading-loose font-monument uppercase tracking-wider text-[11px] px-5 py-3.5 rounded-full hover:bg-gray-100 transition duration-500 ${activeSection === option.path ? "bg-secondary text-white hover:bg-secondary hover:text-white" : ""}`}
                     >
                       {option.name}
                     </span>

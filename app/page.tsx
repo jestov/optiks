@@ -5,7 +5,6 @@ import FractionalIcon from "@/components/icons/FractionalIcon";
 import MoneyIcon from "@/components/icons/MoneyIcon";
 import SettingsIcon from "@/components/icons/SettingsIcon";
 import StatsIcon from "@/components/icons/StatsIcon";
-import BrandStrip from "@/components/BrandStrip";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ContactSmall from "@/components/ContactSmall";
@@ -76,13 +75,6 @@ export default function Home() {
       <main className="flex flex-col items-center min-h-[85vh] pt-20 md:pt-36 gap-32 md:gap-44 pb-12 md:pb-28 px-[20px] md:px-24 bg-[url('/img/hero.jpg')] relative bg-cover text-white before:absolute before:inset-0 before:bg-gradient-to-t before:from-secondary/60 before:to-secondary/5 before:z-0 z-4">
         <div className="relative w-full max-w-[1600px] flex flex-col justify-center items-center text-center mx-auto gap-8 mt-24 lg:px-4 px-[10px] z-20">
           <div className="flex flex-col gap-10 max-w-6xl z-11 relative">
-            <div className="flex gap-6 items-center z-11 mx-auto text-left">
-              <TargetIcon />
-              <div className="flex flex-col text-base tracking-[2px] -gap-1">
-                <span>4.5709° N, 74.2973° W</span>
-                <span>Bogotá, Colombia</span>
-              </div>
-            </div>
             <h1 className="text-2xl lg:text-6xl tracking-wide text-white font-monument uppercase  !leading-none">
               <span className="text-greenLighter">
                 Your trusted financial advisor
@@ -109,12 +101,6 @@ export default function Home() {
         <div className="flex justify-center gap-8 w-full relative z-12 px-3">
           <ContactSmall />
         </div>
-        <span className="absolute -left-[8px] bottom-64 -rotate-90 text-lg tracking-[6px]">
-          4.710° N
-        </span>
-        <span className="absolute -right-[32px] bottom-64 -rotate-90 text-lg tracking-[6px]">
-          74.0721° W
-        </span>
 
         <section
           className="bg-primary text-white pt-28 md:pt-48 pb-12 md:pb-24 px-[30px] md:px-32 w-full flex items-center -mt-56 md:-mt-64 relative z-20 rounded-[64px]"
@@ -191,7 +177,6 @@ export default function Home() {
         id="our-clients"
       >
         <Testimonials />
-        <BrandStrip />
       </section>
       <section
         id="contact"

@@ -48,11 +48,7 @@ const BrandStrip = () => {
   const isMobile = useIsMobile();
 
   return (
-    <Marquee
-      gradient={false}
-      speed={isMobile ? 40 : 50}
-      className="py-20 md:py-12"
-    >
+    <Marquee gradient={false} speed={isMobile ? 40 : 50} className="py-1">
       {" "}
       {/* Set speed based on device */}
       {brands.map((brand) => (
