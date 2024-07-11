@@ -36,24 +36,19 @@ const ServiceCard: FC<ServiceCardProps> = ({ Icon, title, description }) => (
 const Services: FC = () => (
   <div>
     <ServiceCard
-      Icon={FractionalIcon}
-      title="Fractional CFO"
-      description="We are a tool for CEOs and CFOs. We are a plug and play solution for solving your financial challenges. Let’s talks."
-    />
-    <ServiceCard
       Icon={StatsIcon}
       title="Financial Round readiness"
       description="Let us share and execute the best tools and strategies we have learned from working at Rappi and other top startups where we have participated in processes for over US$1Bn."
     />
     <ServiceCard
+      Icon={SettingsIcon}
+      title="The CFO Methodology"
+      description="Structure your financial department with the best tools and strategies from top start-ups.  We will execute and give you the best in class tools so that you can have full financial optiks to manage your business whether you are a CFO or a CEO."
+    />
+    <ServiceCard
       Icon={MoneyIcon}
       title="Tech M&A (sell or buy your tech company)"
       description="Selling/buying your company is probably the most important professional decision an entrepreneur can make. Let us give you the best practices to buy or sell your tech company at the best price."
-    />
-    <ServiceCard
-      Icon={SettingsIcon}
-      title="The CFO Methodology"
-      description="Through this program we share the best practices we have learned for you to achieve the best in class tools and strategies for managing your financial department whether you are a CEO or CFO."
     />
   </div>
 );
@@ -82,10 +77,8 @@ export default function Home() {
               to grow the value of your company
             </h1>
             <h2 className="text-lg md:text-2xl max-w-4xl w-full mx-auto">
-              As your trusted financial advisor, we are committed to growing the
-              value of your company with strategic insights and expert guidance.
-              Partner with us to navigate the financial landscape and achieve
-              sustainable success.
+              We are committed to growing the value of your company by sharing
+              the best practices to structure your finances.
             </h2>
           </div>
           <a
@@ -144,7 +137,7 @@ export default function Home() {
             </h1>
             <p className="text-lg md:text-xl !leading-snug md:w-2/4 text-center md:text-left">
               We deliver top tier financial services for startups and growing
-              businesses. Take your financial so-phistication 5 years ahead and
+              businesses. Take your financial sophistication 5 years ahead and
               have total clarity of your business.
             </p>
           </div>

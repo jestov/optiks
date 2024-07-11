@@ -13,36 +13,25 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Javier Aldape",
-    role: "CEO & Co-founder, Kredi",
+    name: "Stephanie Gomez",
+    role: "CEO, Bacu",
     content:
-      '"This service has completely transformed our business. Highly recommend!"',
+      '"Thanks to Optiks, we navigated complex financial strategies with ease and achieved remarkable success."',
     image: "/img/testimonials/1.jpg",
   },
   {
-    name: "Jane Smith",
-    role: "Marketing Manager",
-    content: '"Exceptional quality and outstanding support!"',
+    name: "Oscar Herrera",
+    role: "CFO, Rappi",
+    content:
+      '"JP was a key asset to our financial team at Rappi. I have no doubt that Optiks will be invaluable to growing companies and startups, sharing valuable financial learnings."',
     image: "/img/testimonials/2.jpg",
   },
   {
-    name: "Alice Johnson",
-    role: "Product Manager",
+    name: "Sebastian Ruales",
+    role: "CEO, BIA",
     content:
-      '"The team is highly skilled and very responsive. Our project was a huge success!"',
+      '"Optiks was key in advising us on advanced financial strategies that propelled our business forward."',
     image: "/img/testimonials/3.jpg",
-  },
-  {
-    name: "Robert Brown",
-    role: "CTO of Startup",
-    content: '"Innovative solutions and excellent customer service."',
-    image: "/img/testimonials/4.jpg",
-  },
-  {
-    name: "Emily White",
-    role: "Designer",
-    content: '"Creative and professional. Our go-to for design needs."',
-    image: "/img/testimonials/4.jpg",
   },
 ];
 
