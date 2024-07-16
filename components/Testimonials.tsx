@@ -57,7 +57,7 @@ const testimonials: Testimonial[] = [
     name: "Javier Aldape",
     role: "CEO, Kredi",
     content:
-      '"Thanks to Optiks, we navigated complex financial strategies with ease and achieved remarkable success."',
+      '"Optiks provided the crucial expertise we needed to leverage sophisticated financial solutions, helping us grow with their fast, plug-and-play strategies."',
     image: "/img/testimonials/javier.jpg",
     raised: "Raised US$2+ MM",
     company: "Kredi",
