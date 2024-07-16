@@ -149,16 +149,18 @@ const Testimonials: React.FC = () => {
                       <span className="text-mainGray text-opacity-80 uppercase tracking-wider text-lg">
                         {testimonial.raised}
                       </span>
-                      <Link
-                        href={testimonial.link}
-                        target="_blank"
-                        className="min-w-[200px] flex justify-between items-center gap-4 px-5 md:px-5.5 py-4 md:py-5 rounded-full cursor-pointer bg-greenLighter hover:bg-greenLight text-secondary transition duration-500"
-                      >
-                        <div>Read more about {testimonial.company}</div>
-                        <span className="inline-block ml-2">
-                          <ArrowSmallIcon />
-                        </span>
-                      </Link>
+                      {testimonial.link && (
+                        <Link
+                          href={testimonial.link}
+                          target="_blank"
+                          className="min-w-[200px] flex justify-between items-center gap-4 px-5 md:px-5.5 py-4 md:py-5 rounded-full cursor-pointer bg-greenLighter hover:bg-greenLight text-secondary transition duration-500"
+                        >
+                          <div>Read more about {testimonial.company}</div>
+                          <span className="inline-block ml-2">
+                            <ArrowSmallIcon />
+                          </span>
+                        </Link>
+                      )}
                     </div>
                   )}
                 </div>
