@@ -3,21 +3,28 @@ import React, { useState } from "react";
 import Image from "next/image";
 import ArrowSmallIcon from "./icons/ArrowSmallIcon";
 import BrandStrip from "./BrandStrip";
+import Link from "next/link";
 
 type Testimonial = {
   name: string;
   role: string;
   content: string;
   image: string;
+  raised?: string;
+  company?: string;
+  link?: string;
 };
 
 const testimonials: Testimonial[] = [
   {
-    name: "Stephanie Gomez",
-    role: "CEO, Bacu",
+    name: "Sebastian Ruales",
+    role: "CEO, BIA",
     content:
-      '"Thanks to Optiks, we navigated complex financial strategies with ease and achieved remarkable success."',
-    image: "/img/testimonials/1.jpg",
+      '"Optiks was key in advising us on advanced financial strategies that propelled our business forward."',
+    image: "/img/testimonials/3.jpg",
+    raised: "US$26+ MM raised",
+    company: "BIA",
+    link: "https://forbes.co/2024/05/06/emprendedores/bia-energy-es-admitida-en-la-red-de-emprendedores-endeavor",
   },
   {
     name: "Oscar Herrera",
@@ -27,11 +34,34 @@ const testimonials: Testimonial[] = [
     image: "/img/testimonials/2.jpg",
   },
   {
-    name: "Sebastian Ruales",
-    role: "CEO, BIA",
+    name: "José Gedeon",
+    role: "CEO, Cobre",
     content:
-      '"Optiks was key in advising us on advanced financial strategies that propelled our business forward."',
-    image: "/img/testimonials/3.jpg",
+      "Optiks's deep understanding of advanced financial strategies made a significant impact on our startup's growth and success.",
+    image: "/img/testimonials/jose.jpg",
+    raised: "US$25+ MM Raised",
+    company: "Cobre",
+    link: "https://forbes.co/2023/10/10/emprendedores/cobre-obtiene-us13-millones-para-su-plataforma-de-pagos-que-usan-mas-de-100-empresas",
+  },
+  {
+    name: "Stephanie Gomez",
+    role: "CEO, Bacu",
+    content:
+      '"Thanks to Optiks, we navigated complex financial strategies with ease and achieved remarkable success."',
+    image: "/img/testimonials/1.jpg",
+    raised: "US$8+ MM Raised",
+    company: "Bacu",
+    link: "https://forbes.co/2023/03/23/emprendedores/bacu-arranca-con-us6-millones-buscando-ser-una-gran-cadena-de-restaurantes",
+  },
+  {
+    name: "Javier Aldape",
+    role: "CEO, Kredi",
+    content:
+      '"Thanks to Optiks, we navigated complex financial strategies with ease and achieved remarkable success."',
+    image: "/img/testimonials/javier.jpg",
+    raised: "Raised US$2+ MM",
+    company: "Kredi",
+    link: "https://www.forbes.com.mx/kredi-marketplace-creditos-hipotecarios-2-mdd-mexico/",
   },
 ];
 
@@ -114,6 +144,23 @@ const Testimonials: React.FC = () => {
                   <p className="text-xl md:text-3xl !leading-snug">
                     {testimonial.content}
                   </p>
+                  {testimonial.raised && (
+                    <div className="flex justify-between items-center">
+                      <span className="text-mainGray text-opacity-80 uppercase tracking-wider text-lg">
+                        {testimonial.raised}
+                      </span>
+                      <Link
+                        href={testimonial.link}
+                        target="_blank"
+                        className="min-w-[200px] flex justify-between items-center gap-4 px-5 md:px-5.5 py-4 md:py-5 rounded-full cursor-pointer bg-greenLighter hover:bg-greenLight text-secondary transition duration-500"
+                      >
+                        <div>Read more about {testimonial.company}</div>
+                        <span className="inline-block ml-2">
+                          <ArrowSmallIcon />
+                        </span>
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -131,15 +178,6 @@ const Testimonials: React.FC = () => {
               ></div>
             ))}
           </div>
-        </div>
-        <div className="w-full md:px-14 lg:px-48 xl:px-32">
-          <Image
-            className="w-full max-w-[1400px] mx-auto"
-            width={1000}
-            height={1000}
-            src="/img/map.svg"
-            alt=""
-          />
         </div>
       </div>
     </section>

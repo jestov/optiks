@@ -50,6 +50,11 @@ const Services: FC = () => (
       title="Tech M&A (sell or buy your tech company)"
       description="Selling/buying your company is probably the most important professional decision an entrepreneur can make. Let us give you the best practices to buy or sell your tech company at the best price."
     />
+    <ServiceCard
+      Icon={FractionalIcon}
+      title="CFO as a service products"
+      description="Wether your a are a CFO and need horse power to execute critical matters or a CEO with a small team we can help you on your financial needs."
+    />
   </div>
 );
 
@@ -77,8 +82,8 @@ export default function Home() {
               to grow the value of your company
             </h1>
             <h2 className="text-lg md:text-2xl max-w-4xl w-full mx-auto">
-              We are committed to growing the value of your company by sharing
-              the best practices to structure your finances.
+              Financial round readiness, structure you financial department.,
+              sell/buy your start-up or growing business”
             </h2>
           </div>
           <a
@@ -96,7 +101,7 @@ export default function Home() {
         </div>
 
         <section
-          className="bg-primary text-white pt-28 md:pt-48 pb-12 md:pb-24 px-[30px] md:px-32 w-full flex items-center -mt-56 md:-mt-64 relative z-20 rounded-[64px]"
+          className="bg-primary text-white pt-28 md:pt-48 pb-12 md:pb-24 px-[30px] md:px-32 w-full flex items-center -mt-56 md:-mt-64 relative z-20 rounded-[64px] max-w-[1800px]"
           id="why-optiks"
         >
           <div className="w-full max-w-[1400px] mx-auto min-h-[60vh] grid md:grid-cols-2 items-center gap-2 md:gap-32">
@@ -127,10 +132,10 @@ export default function Home() {
       </main>
 
       <section
-        className="bg-white px-[20px] py-12 md:py-32 min-h-[60vh] rounded-t-3xl -mt-8 z-4 sticky -top-[150vh] bg-[url('/img/bg-pattern.svg')] "
+        className="bg-white px-[20px] py-12 md:py-32 min-h-[60vh] rounded-t-3xl -mt-8 z-4 sticky -top-[150vh] bg-[url('/img/bg-pattern.svg')]"
         id="services"
       >
-        <div className="w-full max-w-[1400px] mx-auto text-secondary flex flex-col gap-16 z-4 items-start">
+        <div className="w-full max-w-[1400px] 3xl:max-w-[1800px] mx-auto text-secondary flex flex-col gap-16 z-4 items-start">
           <div className="flex flex-col md:flex-row gap-10 md:gap-32 items-center justify-between relative">
             <h1 className="text-center font-monument uppercase text-3xl lg:text-5xl text-secondaryBlue relative inline-flex before:absolute after:absolute before:bg-[url('/img/title_left_blue.svg')] after:bg-[url('/img/title_right_blue.svg')] before:bg-contain after:bg-contain before:bg-no-repeat after:bg-no-repeat before:w-[120%] before:h-[120%] before:left-[-5%] before:top-[-12.5%] after:w-[120%] after:h-[120%] after:left-[105%] after:top-[-12.5%]">
               Our Services
@@ -166,14 +171,23 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="w-full bg-secondary py-12 md:py-32 flex flex-col justify-center items-center gap-12 relative z-40 rounded-t-[64px]"
+        className="w-full bg-secondary py-12 md:py-32 flex flex-col justify-center items-center gap-12 relative z-20 rounded-[64px]"
         id="our-clients"
       >
         <Testimonials />
       </section>
+      <div className="w-full px-[10px] py-[80px] md:px-14 lg:px-48 xl:px-32 bg-white bg-[url('/img/bg-pattern.svg')] relative">
+        <Image
+          className="w-full max-w-[1400px] mx-auto sticky top-0"
+          width={1000}
+          height={1000}
+          src="/img/map.svg"
+          alt=""
+        />
+      </div>
       <section
         id="contact"
-        className="flex flex-col justify-center gap-12 md:gap-32 pt-12 md:pt-32 pb-12 md:pb-16 px-[30px] md:px-[60px] bg-[url('/img/water.jpg')] bg-no-repeat bg-bottom bg-left lg:bg-center bg-cover relative text-white before:absolute before:inset-0 before:bg-gradient-to-t before:from-secondary/30 before:to-secondary/100 before:z-0 z-40"
+        className="flex flex-col justify-end items-end gap-12 md:gap-32 pt-12 md:pt-36 pb-12 md:pb-20 px-[30px]  md:px-[60px] bg-[url('/img/water-mobile.jpg')]  md:bg-[url('/img/water.jpg')] bg-no-repeat bg-center bg-cover relative text-white before:absolute before:rounded-t-[64px] before:inset-0 before:bg-gradient-to-t before:from-secondary/30 before:to-secondary/100 before:z-0 z-40 rounded-t-[64px]"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32 max-w-[1400px] mx-auto z-2 relative">
           <div className="flex flex-col gap-12 items-center md:items-start">

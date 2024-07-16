@@ -8,6 +8,8 @@ import InstagramIcon from "../components/icons/InstagramIcon";
 import FacebookIcon from "../components/icons/FacebookIcon";
 import LinkedinIcon from "../components/icons/LinkedinIcon";
 import ContactFooter from "./ContactFooter";
+import ColIcon from "./icons/ColIcon";
+import MxIcon from "./icons/MxIcon";
 
 const socialOptions = [
   {
@@ -73,23 +75,33 @@ export default function Footer() {
   };
 
   return (
-    <footer className="flex flex-col py-12 md:py-24 px-[30px] xl:px-24 gap-12 lg:gap-32 text-white bg-primary min-h-[35vh] relative z-1 rounded-[32px] w-full">
-      <div className="flex flex-col gap-12 lg:gap-20 lg:flex-row lg:justify-between">
-        <div className="flex flex-col gap-12 justify-center lg:justify-start min-w-[150px] w-full">
+    <footer className="flex flex-col py-12 md:py-24 px-[30px] xl:px-24 gap-12 lg:gap-32 text-white bg-primary min-h-[35vh] relative z-1 rounded-[32px] w-full max-w-[1800px] mx-auto">
+      <div className="flex flex-col gap-12 lg:gap-20 lg:flex-row lg:justify-between items-start">
+        <div className="flex flex-col gap-12 justify-center lg:justify-start min-w-[250px] w-full">
           <LogoWhite />
-          <div className="flex flex-col gap-0.5">
+          <div className="flex flex-col gap-3">
             <span className="text-greenLighter">Contact Us</span>
             <Link
               className="text-xl"
-              href="mailto:donoso@optiks.com.co"
+              href="mailto:contact@optiks.com.co"
               target="_blank"
             >
-              donoso@optiks.com.co
+              contact@optiks.com.co
             </Link>
           </div>
-          <div className="flex flex-col gap-0.5">
-            <span className="text-greenLighter">Based In</span>
-            <span className="text-xl">Bogotá, Colombia</span>
+          <div className="flex flex-col gap-3">
+            <span className="text-greenLighter">Offices</span>
+            <div className="flex flex-col gap-8">
+              <div className="text-lg flex gap-5 !leading-snug">
+                <ColIcon />
+                Edificio Capital Park 93, Calle 93 #11A - 28 Bogota, Colombia{" "}
+              </div>
+              <div className="text-lg flex gap-5 !leading-snug">
+                <MxIcon />
+                IOS OFFICES Arboleda, Av. del Roble 660, Valle del Campestre,
+                66265 San Pedro Garza García, Monterrey, NL, Mexico
+              </div>
+            </div>
           </div>
         </div>
         <ContactFooter />

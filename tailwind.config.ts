@@ -20,6 +20,7 @@ const config: Config = {
         tertiary: "#f9f9f9",
         fourth: "#9AD1D4",
         fifth: "#008BCC",
+        mainGray: "#E1E0DC",
         secondaryBlue: "#2B6DCD",
         greenLight: "#A2DF9C",
         greenLighter: "#A8E5A3",

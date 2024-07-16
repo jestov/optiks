@@ -53,7 +53,7 @@ function ContactSmall() {
       className={
         formSubmitted
           ? "hidden"
-          : "flex flex-col md:flex-row w-full relative z-30 max-w-5xl items-center gap-4 md:gap-0 bg-secondary p-10 md:p-12 rounded-[32px]"
+          : "flex flex-col md:flex-row w-full relative z-30 max-w-5xl items-center gap-4 md:gap-0 bg-secondary p-8 md:p-12 rounded-[32px]"
       }
     >
       <div className="w-full flex flex-col gap-2 md:mr-8">
@@ -78,7 +78,7 @@ function ContactSmall() {
         type="submit"
         className="min-w-[200px] flex justify-between items-center gap-4 px-5 md:px-5.5 py-4 md:py-5 rounded-full md:rounded-l-none cursor-pointer bg-greenLighter hover:bg-greenLight text-secondary transition duration-500"
       >
-        <div>Contact Sales</div>
+        <div>Contact Us</div>
         <span className="inline-block ml-2">
           <ArrowSmallIcon />
         </span>

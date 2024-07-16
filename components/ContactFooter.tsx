@@ -53,11 +53,11 @@ function ContactFooter() {
       className={
         formSubmitted
           ? "hidden"
-          : "flex flex-col md:flex-row w-full relative z-10 md:min-w-[980px] max-w-5xl items-center bg-secondary p-10 md:p-12 gap-6 md:gap-0 rounded-[32px]"
+          : "flex flex-col md:flex-row w-full relative z-10 md:min-w-[920px] max-w-5xl items-center bg-secondary p-8 md:p-12 gap-6 md:gap-0 rounded-[32px]"
       }
     >
       <div className="w-full flex flex-col gap-2 md:mr-8">
-        <h4 className="text-2xl md:text-3xl">
+        <h4 className="text-xl md:text-2xl">
           Ready to grow the value of your company?
         </h4>
         <p className="text-base !leading-snug">
@@ -80,7 +80,7 @@ function ContactFooter() {
         type="submit"
         className="min-w-[180px] -mt-2 md:-mt-0 flex justify-between items-center gap-1.5 px-5 md:px-5.5 py-4 md:py-5 rounded-full md:rounded-l-none cursor-pointer bg-greenLighter hover:bg-greenLight text-secondary transition duration-500"
       >
-        <div>Contact Sales</div>
+        <div>Contact Us</div>
         <span className="inline-block">
           <ArrowSmallIcon />
         </span>

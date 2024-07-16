@@ -23,6 +23,7 @@ const brands = [
     image: "/img/clients/bacu.png",
   },
   { id: 11, name: "Morado", image: "/img/clients/morado.svg" },
+  { id: 12, name: "Cobre", image: "/img/clients/cobre.svg" },
 ];
 
 const useIsMobile = () => {
