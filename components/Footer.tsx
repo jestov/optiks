@@ -83,10 +83,10 @@ export default function Footer() {
             <span className="text-greenLighter">Contact Us</span>
             <Link
               className="text-xl"
-              href="mailto:contact@optiks.com.co"
+              href="mailto:optiks@optiks.com.co"
               target="_blank"
             >
-              contact@optiks.com.co
+              optiks@optiks.com.co
             </Link>
           </div>
           <div className="flex flex-col gap-3">

@@ -14,6 +14,12 @@ function Contact() {
     },
     { id: "company", type: "text", required: true, placeholder: "Company*" },
     {
+      id: "companyWebsite",
+      type: "text",
+      required: true,
+      placeholder: "Company Website*",
+    },
+    {
       id: "email",
       type: "email",
       required: true,
@@ -37,10 +43,11 @@ function Contact() {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        access_key: "a40fbdea-5dff-4265-b353-66e062bbdc86",
+        access_key: "6c93e630-a77c-4ee9-b72f-0b57af3b5b5a",
         name: form.name.valueOf,
         email: form.email.valueOf,
         company: form.company.valueOf,
+        companyWebsite: form.companyWebsite.valueOf,
         message: form.message.valueOf,
       }),
     });
@@ -58,7 +65,7 @@ function Contact() {
   if (formSubmitted) {
     return (
       <div className="py-5 text-2xl text-white" role="alert">
-        Thanks for your message! We&apos;ll reply to you soon!
+        Thanks for your message! We&apos;ll reply to you as soon as possible!
       </div>
     );
   }

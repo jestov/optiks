@@ -11,6 +11,7 @@ import ContactSmall from "@/components/ContactSmall";
 import ArrowSmallIcon from "@/components/icons/ArrowSmallIcon";
 import Testimonials from "@/components/Testimonials";
 import CalendarIcon from "@/components/icons/CalendarIcon";
+import Link from "next/link";
 
 type IconProps = {
   className: string;
@@ -87,7 +88,7 @@ export default function Home() {
               sell/buy your start-up or growing business”
             </h2>
           </div>
-          <a
+          <Link
             href="https://calendar.app.google/Cfa8NYHBW5LzbVAf8"
             target="_blank"
             className="relative z-4 min-w-[230px] animate-pulse hover:animate-none flex justify-between items-center gap-8 px-5 md:px-5.5 py-4 md:py-5 rounded-full cursor-pointer bg-greenLighter text-secondary transition duration-500 hover:bg-greenLight"
@@ -96,7 +97,7 @@ export default function Home() {
             <span className="inline-block ml-2">
               <CalendarIcon />
             </span>
-          </a>
+          </Link>
         </div>
         <div className="flex justify-center gap-8 w-full relative z-12 px-3">
           <ContactSmall />
