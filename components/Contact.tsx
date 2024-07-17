@@ -36,6 +36,16 @@ function Contact() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const company = (form.elements.namedItem("company") as HTMLInputElement)
+      .value;
+    const companyWebsite = (
+      form.elements.namedItem("companyWebsite") as HTMLInputElement
+    ).value;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement)
+      .value;
+
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -44,13 +54,14 @@ function Contact() {
       },
       body: JSON.stringify({
         access_key: "6c93e630-a77c-4ee9-b72f-0b57af3b5b5a",
-        name: form.name.valueOf,
-        email: form.email.valueOf,
-        company: form.company.valueOf,
-        companyWebsite: form.companyWebsite.valueOf,
-        message: form.message.valueOf,
+        name,
+        email,
+        company,
+        companyWebsite,
+        message,
       }),
     });
+
     const result = await response.json();
     if (result.success) {
       console.log(result);
