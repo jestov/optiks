@@ -58,7 +58,7 @@ const testimonials: Testimonial[] = [
     role: "CEO, Kredi",
     content:
       '"Optiks provided the crucial expertise we needed to leverage sophisticated financial solutions, helping us grow with their fast, plug-and-play strategies."',
-    image: "/img/testimonials/javier.jpg",
+    image: "/img/testimonials/aldape.jpg",
     raised: "Raised US$2+ MM",
     company: "Kredi",
     link: "https://www.forbes.com.mx/kredi-marketplace-creditos-hipotecarios-2-mdd-mexico/",

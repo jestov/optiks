@@ -22,8 +22,8 @@ function Contact() {
     {
       id: "message",
       type: "textarea",
-      required: false,
-      placeholder: "Your message!",
+      required: true,
+      placeholder: "Your message*",
     },
   ];
 
