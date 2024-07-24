@@ -84,8 +84,8 @@ export default function Home() {
               to grow the value of your company
             </h1>
             <h2 className="text-lg md:text-2xl max-w-4xl w-full mx-auto">
-              Financial round readiness, structure you financial department.,
-              sell/buy your start-up or growing business”
+              Financial round readiness, structure your financial department,
+              sell/buy your start-up or growing business.
             </h2>
           </div>
           <Link
@@ -126,7 +126,7 @@ export default function Home() {
                 financial strategy. With more than US$1 Bn in capital raisings,
                 M&A and financial advisory in both traditional corporate as well
                 as start-up and VC backed companies, we have developed a
-                methodology to help you grow your company trough financial
+                methodology to help you grow your company through financial
                 strategies.
               </p>
             </div>
