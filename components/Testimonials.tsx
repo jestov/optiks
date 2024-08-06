@@ -63,6 +63,13 @@ const testimonials: Testimonial[] = [
     company: "Kredi",
     link: "https://www.forbes.com.mx/kredi-marketplace-creditos-hipotecarios-2-mdd-mexico/",
   },
+  {
+    name: "Sebastian Pozo",
+    role: "Head of Finance, Solvento",
+    content:
+      '"Optiks advisory and technical expertise have been instrumental in helping us design effective growth strategies. Their deep understanding of the startup ecosystem has provided us with invaluable insights. I highly recommend them for startups and scale-ups seeking sophisticated financial planning to acelerate their growth."',
+    image: "/img/testimonials/pozo.jpg",
+  },
 ];
 
 const Testimonials: React.FC = () => {
@@ -145,15 +152,15 @@ const Testimonials: React.FC = () => {
                     {testimonial.content}
                   </p>
                   {testimonial.raised && (
-                    <div className="flex justify-between items-center">
-                      <span className="text-mainGray text-opacity-80 uppercase tracking-wider text-lg">
+                    <div className="flex flex-wrap gap-4 justify-between items-center">
+                      <span className="text-mainGray text-opacity-80 uppercase tracking-wider text-sm lg:text-lg">
                         {testimonial.raised}
                       </span>
                       {testimonial.link && (
                         <Link
                           href={testimonial.link}
                           target="_blank"
-                          className="min-w-[200px] flex justify-between items-center gap-4 px-5 md:px-5.5 py-4 md:py-5 rounded-full cursor-pointer bg-greenLighter hover:bg-greenLight text-secondary transition duration-500"
+                          className="w-full md:w-auto min-w-[200px] flex justify-between items-center gap-4 px-5 md:px-5.5 py-4 md:py-5 rounded-full cursor-pointer bg-greenLighter hover:bg-greenLight text-secondary transition duration-500"
                         >
                           <div>Read more about {testimonial.company}</div>
                           <span className="inline-block ml-2">
